@@ -12,7 +12,7 @@ apps:
           run:
             command: node index.js
           ports:
-            - port: 8000
+            - port: 3000
               protocol: http
           env:
             - key: SESSION_ID
@@ -47,4 +47,3 @@ apps:
               value: "false"
             - key: PRESENCE
               value: "null"
-  
