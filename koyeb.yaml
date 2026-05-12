@@ -1,0 +1,50 @@
+apps:
+    - name: stark-md
+      services:
+        - name: stark-md
+          type: web
+          git:
+            repository: github.com/legacyhood/STARK-MD
+            branch: main
+          build:
+            buildpackName: nodejs
+            buildCommand: npm install --ignore-scripts
+          run:
+            command: node index.js
+          ports:
+            - port: 8000
+              protocol: http
+          env:
+            - key: SESSION_ID
+              value: ""
+            - key: MONGO_URI
+              value: ""
+            - key: OWNER_NUMBER
+              value: "2348038280548"
+            - key: OWNER_NAME
+              value: "STARK USER"
+            - key: BOT_NAME
+              value: "STARK-MD"
+            - key: MODE
+              value: "public"
+            - key: PREFIX
+              value: "."
+            - key: TIME_ZONE
+              value: "Africa/Lagos"
+            - key: ANTI_DELETE
+              value: "true"
+            - key: AUTO_STATUS_VIEWS
+              value: "true"
+            - key: AUTO_STATUS_REACTS
+              value: "true"
+            - key: AUTO_STATUS_REPLY
+              value: "false"
+            - key: ANTI_LINK
+              value: "false"
+            - key: ANTI_CALL
+              value: "false"
+            - key: WELCOME
+              value: "false"
+            - key: PRESENCE
+              value: "null"
+  
