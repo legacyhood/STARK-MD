@@ -5,7 +5,8 @@ const fs = require('fs'),
 global.session = "https://stark-pair.vercel.app";
 
 const rawSessionId = process.env.SESSION_ID || "STARK-MD==";
-console.log('[🔑] SESSION_ID prefix:', rawSessionId.substring(0, 15) + '...');
+console.error('[🔑] SESSION_ID value: [' + rawSessionId.trim() + ']');
+console.error('[🔑] SESSION_ID length: ' + rawSessionId.length);
 
 module.exports = {
     SESSION_ID: rawSessionId.trim(),
