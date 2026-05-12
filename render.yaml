@@ -1,0 +1,42 @@
+services:
+    - type: web
+      name: stark-md
+      runtime: node
+      buildCommand: npm install --ignore-scripts
+      startCommand: node index.js
+      envVars:
+        - key: SESSION_ID
+          sync: false
+        - key: MONGO_URI
+          sync: false
+        - key: OWNER_NUMBER
+          value: "2348038280548"
+        - key: OWNER_NAME
+          value: STARK USER
+        - key: BOT_NAME
+          value: STARK-MD
+        - key: MODE
+          value: public
+        - key: PREFIX
+          value: "."
+        - key: TIME_ZONE
+          value: Africa/Lagos
+        - key: ANTI_DELETE
+          value: "true"
+        - key: AUTO_STATUS_VIEWS
+          value: "true"
+        - key: AUTO_STATUS_REACTS
+          value: "true"
+        - key: AUTO_STATUS_REPLY
+          value: "false"
+        - key: ANTI_LINK
+          value: "false"
+        - key: ANTI_CALL
+          value: "false"
+        - key: AUTO_REACT
+          value: "false"
+        - key: WELCOME
+          value: "false"
+        - key: PRESENCE
+          value: "null"
+  
